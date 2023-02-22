@@ -1,0 +1,144 @@
+--- Configuracion inicial
+
+git config --global user.name "el nombre"
+	git config user.name
+git config --global user.email "el correo"
+git init
+git config --global init.defaultBranch main
+
+--- Tres areas en GIT
+
+Directorio trabajo : Carpeta del proyecto,esta el arch. .git
+Area preparacion : Conjunto de archivos que seran incluidos en proximo commit(foto en la linea del tiempo)
+Repositorio : .git es un directorio contiene los metadatos y versiones del proyecto(alls commit)
+
+Estados de los archivos
+	Modificada - Preparada - Confirmada(Modified - Staged - Committed)
+
+git status
+git add . | git add nombre_archivo
+git rm --cached <file> : para sacar del estado de preparacion
+
+--- Que es un commit
+
+Es un componete basico que lleva el registro o (foto) del estado de un proyecto en un momento especifico
+Registra los cambios con una version anterior
+
+
+git commit -m "Agregar archivo de texto"
+git log
+git commit
+git config --global core.editor "code --wait"
+git commit --amend : para editar el ultimo commit
+git reset --soft HEAD~1 : elimina el ultimo commit,pero mantiene los archivos
+	Se puede usar --hard si es que no quiero mantener los cambios
+	HEAD se refiere al ultimo commit de la rama
+
+--- Ramas(Branch)
+	Es una linea independiente de desarrollo en el repo
+	Podemos convinar ramas
+git branch version-js
+git branch
+git checkout version-js : cambiar de rama
+git checkout -b version-python : creamos y nos vamos a esa rama
+git branch -m version-js : para cambiar el nombre
+git branch -m version-python version-py: cambiamos el nombre sin estar en la rama
+
+
+git branch -d version-py : eliminar branch
+
+
+git log --online
+git log -p
+
+--- Fusionar ramas (merge)
+
+git commit
+git merge rama-a-fusionar
+git commit 
+git merge --continue
+
+--- Que es Github
+
+
+git clone repositorio
+git remote 
+git remote -v
+git push
+
+Generate tocken
+
+git pull
+git fetch origin : es una vista previa a los cambios del repo
+git checkout origin/main
+
+git pull origin main : baja los cambios desde el repo
+
+--- Para enviar desde local a remote
+git remote add origin https://github.com/daeselixir/proyecto-javascript.git
+
+
+--- Bifurcar un repositorio(FORK)
+Crear un copia del repo remoto en tu cuenta de github
+
+
+Pull request a traves de un fork
+$ git push origin parrafo-nuevo : enviar una rama nueva al remoto
+
+--- Issues (Tareas pendientes)
+
+--- Crear ramas GitHub
+git pull origin rama-nueva-de-remoto
+git fetch origin : obtener los cambios remotos
+git checkout rama-nueva-de-remoto
+
+
+Eliminar una rama
+git branch -d rama-nueva-de-remoto : eliminando en local
+git branch -a
+git push origin -d rama-nueva-de-remoto
+
+
+
+Token window: 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
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
